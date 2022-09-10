@@ -5,7 +5,7 @@
  *
  *Return : Always 0 (success)
  */
-int void main()
+int main()
 {
 puts("\"Programming is like building a multilingual puzzle");
 return (0);
