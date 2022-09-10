@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stderr>
 
 /**
  *Description: ptint various typr of the computer
