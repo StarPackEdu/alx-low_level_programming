@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <main.h>
 /*
  * Main used for here
  *
@@ -7,4 +8,5 @@
 int main(void)
 {
 printf("_putchar\n");
+  return (0)
 }
