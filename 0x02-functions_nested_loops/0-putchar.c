@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "main.h"
 /**
  * main _putchar printing characters
