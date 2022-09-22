@@ -1,2 +1,4 @@
-trh
-tg
+tests/
+main.c
+_putchar.c
+.vscode/
