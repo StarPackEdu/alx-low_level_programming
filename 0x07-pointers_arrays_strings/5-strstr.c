@@ -1,19 +1,34 @@
 #include "main.h"
 /**
-*print_chessboard - a function that prints the chessboard.
-*@a: array containing board elements
-*returns nothing
+*_strstr - The _strstr() function finds the first occurrence
+* of the substring needle in the string haystack.
+* The terminating null bytes (\0) are not compared
+*@haystack: string where the search is made
+*@needle: string whose occurence is searched in haystack
+*Return:Returns a pointer to the beginning of the located
+* substring, or NULL if the substring is not found.
 */
 
-void print_chessboard(char (*a)[8])
+char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
+	int i;
 
-	for (i = 0; a[i][7]; i++)
+	if (*needle == 0)
+		return (haystack);
+
+	while (*haystack)
 	{
-		for (j = 0; j < 8; j++)
-			_putchar(a[i][j]);
-		_putchar('\n');
-	}
+		i = 0;
 
+		if (haystack[i] == needle[i])
+		{
+			do {
+				if (needle[i + 1] == '\0')
+					return (haystack);
+				i++;
+			} while (haystack[i] == needle[i]);
+		}
+		haystack++;
+	}
+	return ('\0');
 }
