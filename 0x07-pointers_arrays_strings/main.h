@@ -7,7 +7,7 @@
  *char prototypes()
  */
 int _putchar(char);
-int _start(char);
+void set_string(char **s, char *to);
 void reverse_array(int *a, int n);
 void print_number(int n);
 void print_buffer(char *b, int size);
