@@ -1,25 +1,15 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include <stdio.h>
-#include <unistd.h>
-/**
-*void prototypes(void)
-*int prototypes(int)
-*char prototypes(char) 
-*/
-void _puts_recursion(char *s);
- void _print_rev_recursion(char *s);
-int _putchar(char c);
-int _strlen_recursion(char *s);
-int factorial(int n);
-int _pow_recursion(int x, int y);
-int _sqrt_recursion(int n);
-int is_prime_number(int n);
-int is_palindrome(char *s);
-int wildcmp(char *s1, char *s2);
-int _sqrt(int n, int x);
-int is_prime(int n, int start);
-int find_strlen(char *s);
-int check_palindrome(char *s, int len, int index);
 
+#include <stdlib.h>
+
+void free_grid(int **grid, int height);
+char *create_array(unsigned int size, char c);
+char *_strdup(char *str);
+char *str_concat(char *s1, char *s2);
+char *argstostr(int ac, char **av);
+char **strtow(char *str);
+int **alloc_grid(int width, int height);
+int len(char *str);
+int num_words(char *str);
 #endif /* MAIN_H */
