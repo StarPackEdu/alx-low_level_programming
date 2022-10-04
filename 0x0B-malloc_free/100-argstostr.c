@@ -8,6 +8,7 @@
  * @av: Pointer to arguments
  *
  * Retun: Pointer to concatenated string (SUCCESS) or
+ * argstostr return always success or
  * NULL if @ac == 0 or @av == NULL (FAILURE) or
  * NULL if if insufficient memory was available (FAILURE)
  */
