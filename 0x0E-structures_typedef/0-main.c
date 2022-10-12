@@ -9,12 +9,12 @@
 struct dog 
 {
 char *name;
-    float *age;
+    float age;
     char *owner;
-}
+};
 int main(void)
 {
-    struct dog dog;
+    struct dog my_dog;
     my_dog.name = "Poppy";
     my_dog.age = 3.5;
     my_dog.owner = "Bob";
