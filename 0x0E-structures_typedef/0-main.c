@@ -6,7 +6,7 @@
  *
  * Return: Always 0.
  */
-struct dog my_dog
+struct dog 
 {
 char *name;
     float *age;
@@ -14,6 +14,7 @@ char *name;
 }
 int main(void)
 {
+    struct dog dog;
     my_dog.name = "Poppy";
     my_dog.age = 3.5;
     my_dog.owner = "Bob";
