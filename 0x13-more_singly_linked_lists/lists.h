@@ -1,64 +1,34 @@
-#include "lists.h"
+#ifndef LISTS_H
+#define LISTS_H
+
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * insert_nodeint_at_index - returns the nth node of a linked list
- * @head: pointer to the head of the list
- * @idx: index of the node to be added
- * @n: content of the new node
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
  *
- * Return: the address of the node
+ * Description: singly linked list node structure
+ * 
  */
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+typedef struct listint_s
 {
-	listint_t *new_node = NULL;
-	listint_t *previous_node = NULL;
-	unsigned int i = 0;
+int n;
+struct listint_s *next;
+} listint_t;
 
-	new_node = malloc(sizeof(listint_t));
-	if (new_node == NULL || idx > listint_len(*head))
-	{
-		free(new_node);
-		return (NULL);
-	}
-	new_node->n = n;
-	new_node->next = NULL;
-	while (head != NULL)
-	{
-		if (i == idx)
-		{
-			if (i == 0)
-			{
-				new_node->next = *head;
-				*head = new_node;
-				return (new_node);
-			}
-			new_node->next = previous_node->next;
-			previous_node->next = new_node;
-			return (new_node);
-		}
-		else if ((i + 1) == idx)
-			previous_node = *head;
-		head = &((*head)->next);
-		i++;
-	}
-	return (NULL);
-}
 
-/**
- * listint_len - counts the number of nodes in a linked list
- * @h: head of the list
- *
- * Return: the number of elements
- */
-size_t listint_len(const listint_t *h)
-{
-	const listint_t *cursor = h;
-	size_t count = 0;
+size_t print_listint(const listint_t *h);
+size_t listint_len(const listint_t *h);
+listint_t *add_nodeint(listint_t **head, const int n);
+listint_t *add_nodeint_end(listint_t **head, const int n);
+void free_listint(listint_t *head);
+void free_listint2(listint_t **head);
+int pop_listint(listint_t **head);
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
+int sum_listint(listint_t *head);
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
+int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
-	while (cursor != NULL)
-	{
-		count += 1;
-		cursor = cursor->next;
-	}
-	return (count);
-}
+#endif
