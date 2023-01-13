@@ -1,25 +1,16 @@
-<<<<<<< HEAD
-the
-ththr
-=======
 #include "hash_tables.h"
-
 /**
- * hash_djb2 - implementation of the djb2 algorithm
- * @str: string used to generate hash value
- *
- * Return: hash value
+ * hash_djb2 - hash function generates a djb2
+ * @str: pointer to chars a hash
+ * Return: hash key
  */
 unsigned long int hash_djb2(const unsigned char *str)
 {
-	unsigned long int hash;
+	unsigned long hash = 5381;
 	int c;
 
-	hash = 5381;
 	while ((c = *str++))
-	{
-		hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
-	}
+	hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+
 	return (hash);
 }
->>>>>>> 6a3d14054e02bd2212c2c80f20dc6d12a7016286
