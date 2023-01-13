@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-the
-ththe
-=======
 #include "hash_tables.h"
-
 /**
  * hash_table_create - Creates a hash table.
  * @size: The size of the array.
@@ -29,4 +24,3 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	return (ht);
 }
->>>>>>> 6a3d14054e02bd2212c2c80f20dc6d12a7016286
